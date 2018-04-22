@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "65145267899",
+    "firebase_url": "https://farmgo-33d10.firebaseio.com",
+    "project_id": "farmgo-33d10",
+    "storage_bucket": "farmgo-33d10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65145267899:android:01ab63ed85092a23",
+        "android_client_info": {
+          "package_name": "id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65145267899-lr21ae32nba71vsai63bboicr3g47o0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe2cyv4nPYdqbjZiGRDrG7XDrwbvebSjM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
