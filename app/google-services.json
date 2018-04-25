@@ -15,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "500883738837-tl0s7e4l2nm52b4feeid22u0jsl72erq.apps.googleusercontent.com",
+          "client_id": "500883738837-33atil023n62fgsc1u12v03t9mserseg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo",
+            "certificate_hash": "b5e28943e66d386a7ed1c62f9378b3346756206e"
+          }
+        },
+        {
+          "client_id": "500883738837-9njn1blqh85sel8d06733r7966o0v77s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo",
@@ -23,7 +31,7 @@
           }
         },
         {
-          "client_id": "500883738837-jia347v8j9bu22akmt2cguh6a5g6esoe.apps.googleusercontent.com",
+          "client_id": "500883738837-hofojpojprlnkv6lfb6oa4gijgu51l4r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo",
@@ -37,7 +45,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAPeWX7-MqIU81b_g1L6J0zkREBKFTLwig"
+          "current_key": "AIzaSyCgJGp-6RspHhPYdQS-iH8KiXx5BhH5Yt0"
         }
       ],
       "services": {
