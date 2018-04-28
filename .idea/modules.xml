@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FarmGo.iml" filepath="$PROJECT_DIR$/FarmGo.iml" />
-      <module fileurl="file://E:\Sekolaa\PPL\FarmGo\FarmGo\FarmGo.iml" filepath="E:\Sekolaa\PPL\FarmGo\FarmGo\FarmGo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\Sekolaa\PPL\FarmGo\FarmGo\app\app.iml" filepath="E:\Sekolaa\PPL\FarmGo\FarmGo\app\app.iml" />
     </modules>
   </component>
 </project>
