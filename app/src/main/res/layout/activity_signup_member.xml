@@ -1,13 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo.SignupActivityMember">
 
     <com.google.android.gms.common.SignInButton
+        android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp">
+
+    </com.google.android.gms.common.SignInButton>
+
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp" />
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:text="Nama" />
+
+    <EditText
+        android:id="@+id/no_telp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nama"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:inputType="textPersonName|phone"
+        android:text="No Telepon" />
+
+    <EditText
+        android:id="@+id/user_member"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pass_member"
+        android:layout_alignBottom="@+id/pass_member"
+        android:layout_alignStart="@+id/kode_perusahaan"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/daftar"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/daftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/signInButton"
+        android:fontFamily="casual"
+        android:text="Daftar"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/pass_member"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/kode_perusahaan"
+        android:layout_below="@+id/kode_perusahaan"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/kode_perusahaan"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_telp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:text="Kode Perusahaan" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/signInButton"
+        android:layout_alignParentEnd="true" />
+
+
 </RelativeLayout>
