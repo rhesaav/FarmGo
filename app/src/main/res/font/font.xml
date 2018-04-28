@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android">
-    <font android:font="@font/LemonMilklight" />
-    <font android:font="@font/LemonMilk" />
-    <font android:font="@font/LemonMilklight" />
-    <font android:font="@font/LemonMilkitalic" />
+    <font android:font="@font/lemonmilk" />
+    <font android:font="@font/lemonmilklight" />
+
+    <font android:font="@font/lemonmilklight" />
+    <font android:font="@font/lemonmilkitalic" />
 </font-family>
