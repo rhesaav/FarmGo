@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "500883738837-ggeec5h9kpft14hi31hva0k9dp9drt5g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo",
+            "certificate_hash": "db46bd5048d5901ded2525d6536cca62fc4e17c7"
+          }
+        },
+        {
           "client_id": "500883738837-33atil023n62fgsc1u12v03t9mserseg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
