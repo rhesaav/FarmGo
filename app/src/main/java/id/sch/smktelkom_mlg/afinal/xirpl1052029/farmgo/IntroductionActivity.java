@@ -77,6 +77,31 @@ public class IntroductionActivity extends AppCompatActivity {
         addBottomDots(0);
         changeStatusBarColor();
         viewPagerAdapter = new ViewPagerAdapter();
+        viewPager.setAdapter(viewPagerAdapter);
+        viewPager.addOnAdapterChangeListener((ViewPager.OnAdapterChangeListener) viewListener);
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(IntroductionActivity.this, Main2Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int current = getItem(+1);
+                if (current < layouts.length) {
+                    viewPager.setCurrentItem(current);
+                } else {
+                    Intent i = new Intent(IntroductionActivity.this, Main2Activity.class);
+                    startActivity(i);
+                    finish();
+                }
+            }
+        });
     }
 
     private void addBottomDots(int position) {
@@ -93,6 +118,10 @@ public class IntroductionActivity extends AppCompatActivity {
         }
         if (dots.length > 0)
             dots[position].setTextColor(colorActive[position]);
+    }
+
+    private int getItem(int i) {
+        return viewPager.getCurrentItem() + 1;
     }
 
     private void changeStatusBarColor() {
