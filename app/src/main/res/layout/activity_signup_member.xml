@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo.SignupActivityMember">
+    tools:context=".SignupActivityMember">
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInButton"
@@ -93,11 +93,8 @@
         android:text="Kode Perusahaan" />
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/signInButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_height="wrap_content" />
 
 
 </RelativeLayout>

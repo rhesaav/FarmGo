@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +39,7 @@ public class IntroductionActivity extends AppCompatActivity {
             addBottomDots(position);
             if (position == layouts.length - 1) {
                 next.setText("Proceed");
-                skip.setVisibility(View.VISIBLE);
+                skip.setVisibility(View.GONE);
             } else {
                 next.setText("Next");
                 skip.setVisibility(View.VISIBLE);
@@ -59,7 +58,7 @@ public class IntroductionActivity extends AppCompatActivity {
         intromanager = new Intromanager(this);
         if (!intromanager.Check()) {
             intromanager.setFirst(false);
-            Intent i = new Intent(IntroductionActivity.this, Main2Activity.class);
+            Intent i = new Intent(IntroductionActivity.this, SignupActivityMember.class);
             startActivity(i);
             finish();
         }
@@ -73,7 +72,7 @@ public class IntroductionActivity extends AppCompatActivity {
         skip = findViewById(R.id.btn_skip);
         next = findViewById(R.id.btn_next);
         layouts = new int[]{R.layout.activity_screen_1, R.layout.activity_screen_2,
-                R.layout.activity_screen_3, R.layout.activity_screen_4,};
+                R.layout.activity_screen_3, R.layout.activity_screen_4};
         addBottomDots(0);
         changeStatusBarColor();
         viewPagerAdapter = new ViewPagerAdapter();
@@ -83,7 +82,7 @@ public class IntroductionActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(IntroductionActivity.this, Main2Activity.class);
+                Intent i = new Intent(IntroductionActivity.this, SignupActivityMember.class);
                 startActivity(i);
                 finish();
             }
@@ -96,7 +95,7 @@ public class IntroductionActivity extends AppCompatActivity {
                 if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
                 } else {
-                    Intent i = new Intent(IntroductionActivity.this, Main2Activity.class);
+                    Intent i = new Intent(IntroductionActivity.this, SignupActivityMember.class);
                     startActivity(i);
                     finish();
                 }
@@ -111,7 +110,7 @@ public class IntroductionActivity extends AppCompatActivity {
         dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226"));
+            dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
             dots[i].setTextColor(colorInactive[position]);
             dotsLayout.addView(dots[i]);
@@ -135,9 +134,8 @@ public class IntroductionActivity extends AppCompatActivity {
     public class ViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
 
-        @NonNull
         @Override
-        public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        public Object instantiateItem(ViewGroup container, int position) {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View v = layoutInflater.inflate(layouts[position], container, false);
             container.addView(v);
@@ -150,12 +148,12 @@ public class IntroductionActivity extends AppCompatActivity {
         }
 
         @Override
-        public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        public boolean isViewFromObject(View view, Object object) {
             return view == object;
         }
 
         @Override
-        public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        public void destroyItem(ViewGroup container, int position, Object object) {
             View v = (View) object;
             container.removeView(v);
         }
