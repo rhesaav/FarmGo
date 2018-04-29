@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 public class IntroductionActivity extends AppCompatActivity {
 
-    Button next, skip;
+    private Button next, skip;
     private int[] layouts;
     private ViewPager viewPager;
     private Intromanager intromanager;
@@ -102,7 +102,7 @@ public class IntroductionActivity extends AppCompatActivity {
         });
     }
 
-    private void addBottomDots(int position) {
+    private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
         int[] colorActive = getResources().getIntArray(R.array.dot_active);
         int[] colorInactive = getResources().getIntArray(R.array.dot_inactive);
@@ -111,11 +111,11 @@ public class IntroductionActivity extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
-            dots[i].setTextColor(colorInactive[position]);
+            dots[i].setTextColor(colorInactive[currentPage]);
             dotsLayout.addView(dots[i]);
         }
         if (dots.length > 0)
-            dots[position].setTextColor(colorActive[position]);
+            dots[currentPage].setTextColor(colorActive[currentPage]);
     }
 
     private int getItem(int i) {
@@ -136,9 +136,9 @@ public class IntroductionActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View v = layoutInflater.inflate(layouts[position], container, false);
-            container.addView(v);
-            return v;
+            View view = layoutInflater.inflate(layouts[position], container, false);
+            container.addView(view);
+            return view;
         }
 
         @Override
@@ -153,8 +153,8 @@ public class IntroductionActivity extends AppCompatActivity {
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
-            View v = (View) object;
-            container.removeView(v);
+            View view = (View) object;
+            container.removeView(view);
         }
     }
 }

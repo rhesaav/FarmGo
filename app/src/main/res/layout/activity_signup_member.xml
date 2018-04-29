@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_farmgo"
     tools:context=".SignupActivityMember">
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:layout_marginStart="15dp">
+        android:layout_alignEnd="@+id/logo"
+        android:layout_below="@+id/user_member"
+        android:layout_marginTop="26dp">
 
     </com.google.android.gms.common.SignInButton>
 
@@ -21,12 +22,13 @@
         android:id="@+id/nama"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/no_telp"
         android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="text|textPersonName"
-        android:text="Nama" />
+        android:text="Nama"
+        android:textColor="@color/cardview_light_background" />
 
     <EditText
         android:id="@+id/no_telp"
@@ -37,7 +39,8 @@
         android:layout_marginTop="61dp"
         android:ems="10"
         android:inputType="textPersonName|phone"
-        android:text="No Telepon" />
+        android:text="No Telepon"
+        android:textColor="@color/cardview_light_background" />
 
     <EditText
         android:id="@+id/user_member"
@@ -48,7 +51,8 @@
         android:layout_alignStart="@+id/kode_perusahaan"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Username" />
+        android:text="Username"
+        android:textColor="@color/cardview_light_background" />
 
     <ImageView
         android:id="@+id/logo"
@@ -56,17 +60,17 @@
         android:layout_height="100dp"
         android:layout_below="@+id/daftar"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/signInButton"
+        android:layout_alignStart="@+id/logo"
         android:fontFamily="casual"
         android:text="Daftar"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -79,22 +83,21 @@
         android:layout_marginTop="21dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@color/cardview_light_background"
+        android:textColorHint="@color/cardview_light_background" />
 
     <EditText
         android:id="@+id/kode_perusahaan"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/no_telp"
         android:layout_below="@+id/no_telp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text|textPersonName"
-        android:text="Kode Perusahaan" />
-
-    <com.facebook.login.widget.LoginButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:text="Kode Perusahaan"
+        android:textColor="@color/cardview_light_background" />
 
 
 </RelativeLayout>
