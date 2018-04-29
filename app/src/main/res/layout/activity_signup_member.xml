@@ -11,9 +11,9 @@
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:layout_marginStart="15dp">
+        android:layout_alignEnd="@+id/logo"
+        android:layout_below="@+id/user_member"
+        android:layout_marginTop="26dp">
 
     </com.google.android.gms.common.SignInButton>
 
@@ -22,9 +22,9 @@
         android:id="@+id/nama"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/no_telp"
         android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="text|textPersonName"
         android:text="Nama"
@@ -68,7 +68,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/logo"
-        android:layout_below="@+id/loginButton"
         android:fontFamily="casual"
         android:text="Daftar"
         android:textColor="@android:color/background_light"
@@ -85,7 +84,8 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/cardview_light_background" />
+        android:textColor="@color/cardview_light_background"
+        android:textColorHint="@color/cardview_light_background" />
 
     <EditText
         android:id="@+id/kode_perusahaan"
@@ -98,11 +98,6 @@
         android:inputType="text|textPersonName"
         android:text="Kode Perusahaan"
         android:textColor="@color/cardview_light_background" />
-
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 
 </RelativeLayout>
