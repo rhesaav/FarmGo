@@ -58,7 +58,7 @@ public class IntroductionActivity extends AppCompatActivity {
         intromanager = new Intromanager(this);
         if (!intromanager.Check()) {
             intromanager.setFirst(false);
-            Intent i = new Intent(IntroductionActivity.this, SignupActivityMember.class);
+            Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
             startActivity(i);
             finish();
         }
@@ -82,7 +82,7 @@ public class IntroductionActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(IntroductionActivity.this, SignupActivityMember.class);
+                Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -94,7 +94,7 @@ public class IntroductionActivity extends AppCompatActivity {
                 if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
                 } else {
-                    Intent i = new Intent(IntroductionActivity.this, SignupActivityMember.class);
+                    Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
                     startActivity(i);
                     finish();
                 }
