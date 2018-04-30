@@ -3,6 +3,7 @@
     package="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,9 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivityMember"></activity>
-        <activity android:name=".SignupActivityOwner"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".DataActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivityMember" />
+        <activity android:name=".SignupActivityOwner" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class InputData extends AppCompatActivity {
 
     DatabaseReference databaseCabang1;
-    private EditText eUmur, eJayam, eJmati, eJtelur, eBtelur, eBmakan;
+    private EditText eUmur, eJayam, eJmati, eJtelur, eBtelur, eBmakan, eTanggal;
     private Button bttnKirim;
     private Data data;
 
@@ -27,6 +27,7 @@ public class InputData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_data);
 
+        eTanggal = findViewById(R.id.etanggal);
         eUmur = findViewById(R.id.umur);
         eJayam = findViewById(R.id.jayam);
         eJmati = findViewById(R.id.jmati);
@@ -45,6 +46,8 @@ public class InputData extends AppCompatActivity {
     }
 
     private void addData() {
+
+        String etanggal = eTanggal.getText().toString().trim();
         String umur = eUmur.getText().toString().trim();
         String jayam = eJayam.getText().toString().trim();
         String jtelur = eJtelur.getText().toString().trim();
@@ -52,14 +55,16 @@ public class InputData extends AppCompatActivity {
         String btelur = eBtelur.getText().toString().trim();
         String bmakan = eBmakan.getText().toString().trim();
 
-        if (TextUtils.isEmpty(umur)) {
+        if (TextUtils.isEmpty(etanggal)) {
             Toast.makeText(this, "Isi Umur", Toast.LENGTH_LONG).show();
-        } else if (TextUtils.isEmpty(jayam)) {
+        } else if (TextUtils.isEmpty(umur)) {
             Toast.makeText(this, "Isi Jumlah Ayam", Toast.LENGTH_LONG).show();
-        } else if (TextUtils.isEmpty(jtelur)) {
+        } else if (TextUtils.isEmpty(jayam)) {
             Toast.makeText(this, "Isi Jumlah Telur", Toast.LENGTH_LONG).show();
-        } else if (TextUtils.isEmpty(jmati)) {
+        } else if (TextUtils.isEmpty(jtelur)) {
             Toast.makeText(this, "Isi Jumlah Mati", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(jmati)) {
+            Toast.makeText(this, "Isi Tanggal", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(btelur)) {
             Toast.makeText(this, "Isi Berat Telur", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(bmakan)) {
@@ -67,7 +72,7 @@ public class InputData extends AppCompatActivity {
         } else {
             String uid = databaseCabang1.push().getKey();
 
-            Data data = new Data(uid, umur, jayam, jtelur, jmati, btelur, bmakan);
+            Data data = new Data(uid, etanggal, umur, jayam, jtelur, jmati, btelur, bmakan);
 
             databaseCabang1.child(uid).setValue(data);
 
