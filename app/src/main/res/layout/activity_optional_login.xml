@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_farmgo">
+    android:background="@drawable/bg_farmgo"
+    tools:context=".OptionalLogin">
 
     <ImageView
         android:id="@+id/logo"
@@ -28,21 +30,23 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button_masuk"
+        android:id="@+id/btn_masuk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_marginTop="89dp"
         android:layout_toStartOf="@+id/logo"
+        android:onClick="goToLogin"
         android:text="MASUK" />
 
     <Button
-        android:id="@+id/button_daftar"
+        android:id="@+id/btn_daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button_masuk"
-        android:layout_alignBottom="@+id/button_masuk"
+        android:layout_alignBaseline="@+id/btn_masuk"
+        android:layout_alignBottom="@+id/btn_masuk"
         android:layout_toEndOf="@+id/logo"
+        android:onClick="goToDaftar"
         android:text="Daftar" />
 
 
