@@ -26,4 +26,6 @@ public class OptionalLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_optional_login);
     }
+
 }
+
