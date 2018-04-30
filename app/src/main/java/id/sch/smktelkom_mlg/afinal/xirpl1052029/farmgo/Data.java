@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 public class Data implements Serializable {
 
+    private String uid;
     private String umur;
     private String jayam;
     private String jmati;
@@ -19,7 +20,8 @@ public class Data implements Serializable {
 
     }
 
-    public Data(String umur, String jayam, String jmati, String jtelur, String btelur, String bmakan) {
+    public Data(String uid, String umur, String jayam, String jmati, String jtelur, String btelur, String bmakan) {
+        this.uid = uid;
         this.umur = umur;
         this.jayam = jayam;
         this.jmati = jmati;
@@ -29,12 +31,17 @@ public class Data implements Serializable {
     }
 
     public void clear() {
+        this.uid = "";
         this.umur = "";
         this.jayam = "";
         this.jmati = "";
         this.jtelur = "";
         this.btelur = "";
         this.bmakan = "";
+    }
+
+    public String getUid() {
+        return uid;
     }
 
     public String getUmur() {
