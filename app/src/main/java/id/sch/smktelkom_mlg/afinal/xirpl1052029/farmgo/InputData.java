@@ -71,7 +71,7 @@ public class InputData extends AppCompatActivity {
 
             databaseCabang1.child(uid).setValue(data);
 
-            Toast.makeText(this, "Form Telah Terkirim ... ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Data Telah Terkirim ", Toast.LENGTH_LONG).show();
 
         }
 
