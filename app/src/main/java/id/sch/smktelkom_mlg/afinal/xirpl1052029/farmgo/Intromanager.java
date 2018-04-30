@@ -10,6 +10,8 @@ import android.content.SharedPreferences;
 
 public class Intromanager {
 
+    private static final String PREF_NAME = "introslider";
+    private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     Context context;
