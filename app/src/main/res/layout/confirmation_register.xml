@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/confirmation">
+
+    <TextView
+        android:id="@+id/owncode"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/groupcode"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/owncode"
+        android:layout_below="@+id/owncode"
+        android:layout_marginTop="60dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:background="@color/colorPrimary"
+        android:text="Ok! I Understand"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
