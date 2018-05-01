@@ -34,7 +34,7 @@ public class InputData extends AppCompatActivity {
         eJtelur = findViewById(R.id.jtelur);
         eBtelur = findViewById(R.id.btelur);
         eBmakan = findViewById(R.id.bpakan);
-        bttnKirim = findViewById(R.id.kirim);
+        bttnKirim = findViewById(R.id.proses_owner);
         databaseCabang1 = FirebaseDatabase.getInstance().getReference("Cabang1");
 
         bttnKirim.setOnClickListener(new View.OnClickListener() {

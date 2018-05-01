@@ -13,10 +13,10 @@ import android.view.ViewGroup;
  * Created by ASUS on 5/1/2018.
  */
 
-public class Tab1 extends Fragment {
+public class TabOwner extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.tab1, container, false);
+        return inflater.inflate(R.layout.tab_owner, container, false);
     }
 }

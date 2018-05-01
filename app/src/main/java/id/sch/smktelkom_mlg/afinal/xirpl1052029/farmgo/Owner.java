@@ -7,6 +7,7 @@ package id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo;
 import java.io.Serializable;
 
 public class Owner implements Serializable {
+
     private String uid;
     private String name;
     private String telp;

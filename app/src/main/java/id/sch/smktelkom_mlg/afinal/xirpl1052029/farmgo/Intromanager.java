@@ -22,7 +22,7 @@ public class Intromanager {
         editor = pref.edit();
     }
 
-    public void setFirst(Boolean isFirst) {
+    public void setFirst(boolean isFirst) {
         editor.putBoolean("check", isFirst);
         editor.commit();
     }

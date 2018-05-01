@@ -11,7 +11,6 @@ public class Member implements Serializable {
     private String uid;
     private String nama;
     private String no_telp;
-    private String kode_perusahaan;
     private String user_member;
     private String pass_member;
 
@@ -19,11 +18,10 @@ public class Member implements Serializable {
 
     }
 
-    public Member(String uid, String nama, String no_telp, String kode_perusahaan, String user_member, String pass_member) {
+    public Member(String uid, String nama, String no_telp, String user_member, String pass_member) {
         this.uid = uid;
         this.nama = nama;
         this.no_telp = no_telp;
-        this.kode_perusahaan = kode_perusahaan;
         this.user_member = user_member;
         this.pass_member = pass_member;
     }
@@ -32,7 +30,6 @@ public class Member implements Serializable {
         this.uid = "";
         this.nama = "";
         this.no_telp = "";
-        this.kode_perusahaan = "";
         this.user_member = "";
         this.pass_member = "";
     }
@@ -49,9 +46,6 @@ public class Member implements Serializable {
         return no_telp;
     }
 
-    public String getKode_perusahaan() {
-        return kode_perusahaan;
-    }
 
     public String getUsername() {
         return user_member;

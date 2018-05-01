@@ -27,6 +27,7 @@ public class SignupActivityOwner extends AppCompatActivity {
         rUsername = findViewById(R.id.user_owner);
         rPassword = findViewById(R.id.pass_owner);
         rNamaperusahaan = findViewById(R.id.namaperusahaan);
+        rKirim = findViewById(R.id.proses_owner);
         databaseOwner = FirebaseDatabase.getInstance().getReference("Owner");
 
         rKirim.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,7 @@ public class SignupActivityOwner extends AppCompatActivity {
 
     private void addOwner() {
         String name = rName.getText().toString().trim();
-        String Telp = rTelp.getText().toString().trim();
+        String telp = rTelp.getText().toString().trim();
         String username = rUsername.getText().toString().trim();
         String password = rPassword.getText().toString().trim();
         String namaperusahaan = rNamaperusahaan.getText().toString().trim();
@@ -48,7 +49,7 @@ public class SignupActivityOwner extends AppCompatActivity {
 
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Isi Nama", Toast.LENGTH_LONG).show();
-        } else if (TextUtils.isEmpty(Telp)) {
+        } else if (TextUtils.isEmpty(telp)) {
             Toast.makeText(this, "Isi No Telepon", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(username)) {
             Toast.makeText(this, "Isi Username", Toast.LENGTH_LONG).show();
@@ -61,7 +62,7 @@ public class SignupActivityOwner extends AppCompatActivity {
         } else {
             String uid = databaseOwner.push().getKey();
 
-            Owner owner = new Owner(uid, name, Telp, username, password, namaperusahaan, alamat);
+            Owner owner = new Owner(uid, name, telp, username, password, namaperusahaan, alamat);
 
             databaseOwner.child(uid).setValue(owner);
 

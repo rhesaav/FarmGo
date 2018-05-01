@@ -123,10 +123,10 @@ public class TabActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab1 tab1 = new Tab1();
+                    TabOwner tab1 = new TabOwner();
                     return tab1;
                 case 1:
-                    Tab2 tab2 = new Tab2();
+                    TabMember tab2 = new TabMember();
                     return tab2;
             }
             return null;

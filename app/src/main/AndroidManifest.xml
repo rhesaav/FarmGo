@@ -15,17 +15,11 @@
         </activity>
 
         <activity android:name=".SignupActivityMember">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".SignupActivityOwner" />
         <activity android:name=".IntroductionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".TabActivity">
             <intent-filter>

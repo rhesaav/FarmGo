@@ -12,11 +12,11 @@ import android.view.ViewGroup;
  * Created by ASUS on 5/1/2018.
  */
 
-public class Tab2 extends Fragment {
+public class TabMember extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.tab2, container, false);
+        return inflater.inflate(R.layout.tab_member, container, false);
     }
 }

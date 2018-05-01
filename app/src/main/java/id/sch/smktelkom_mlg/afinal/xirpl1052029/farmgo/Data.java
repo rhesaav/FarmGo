@@ -17,9 +17,11 @@ public class Data implements Serializable {
     private String btelur;
     private String bmakan;
 
+
     public Data() {
 
     }
+
 
     public Data(String uid, String etanggal, String umur, String jayam, String jmati, String jtelur, String btelur, String bmakan) {
         this.uid = uid;
@@ -31,6 +33,7 @@ public class Data implements Serializable {
         this.btelur = btelur;
         this.bmakan = bmakan;
     }
+
 
     public void clear() {
         this.uid = "";
@@ -74,4 +77,6 @@ public class Data implements Serializable {
     public String getBmakan() {
         return bmakan;
     }
+
+
 }

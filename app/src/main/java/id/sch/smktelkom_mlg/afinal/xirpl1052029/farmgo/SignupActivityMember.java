@@ -50,11 +50,11 @@ public class SignupActivityMember extends AppCompatActivity {
         setContentView(R.layout.tab_member);
 
 
-        eNama = findViewById(R.id.nama);
-        eNo = findViewById(R.id.no_telp);
-        eUser = findViewById(R.id.user_member);
-        ePass = findViewById(R.id.pass_member);
-        Proses = findViewById(R.id.proses_member);
+        eNama = findViewById(R.id.nama_owner);
+        eNo = findViewById(R.id.no_telp_member);
+        eUser = findViewById(R.id.user_owner);
+        ePass = findViewById(R.id.pass_owner);
+        Proses = findViewById(R.id.proses_owner);
         databaseMember = FirebaseDatabase.getInstance().getReference("Member");
 
         Proses.setOnClickListener(new View.OnClickListener() {
@@ -169,6 +169,7 @@ public class SignupActivityMember extends AppCompatActivity {
         } else if (TextUtils.isEmpty(pass_member)) {
             Toast.makeText(this, "Isi Password", Toast.LENGTH_LONG).show();
         } else {
+
             String uid = databaseMember.push().getKey();
 
             Member member = new Member(uid, nama, no_telp, user_member, pass_member);
@@ -179,6 +180,5 @@ public class SignupActivityMember extends AppCompatActivity {
 
         }
     }
-
 }
 
