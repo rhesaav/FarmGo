@@ -27,6 +27,7 @@ public class SignupActivityOwner extends AppCompatActivity {
         rUsername = findViewById(R.id.user_owner);
         rPassword = findViewById(R.id.pass_owner);
         rNamaperusahaan = findViewById(R.id.namaperusahaan);
+        rAlamat = findViewById(R.id.alamat_perusahaan);
         rKirim = findViewById(R.id.proses_owner);
         databaseOwner = FirebaseDatabase.getInstance().getReference("Owner");
 
