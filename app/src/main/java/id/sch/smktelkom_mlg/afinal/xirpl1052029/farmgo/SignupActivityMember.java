@@ -1,160 +1,75 @@
 package id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivityMember extends AppCompatActivity {
 
 
-    // Request sing in code. Could be anything as you required.
-    public static final int RequestSignInCode = 7;
-
-    // Firebase Auth Object.
-    public FirebaseAuth firebaseAuth;
-
-    // Google API Client object.
-    public GoogleApiClient googleApiClient;
-
-    // Google Sign In button .
-    com.google.android.gms.common.SignInButton signInButton;
+    DatabaseReference databaseMember;
+    private EditText eNama, eNo, eKode, eUser, ePass;
+    private Button Proses;
+    private Member member;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_member);
 
-        signInButton = findViewById(R.id.signInButton);
-        signInButton = findViewById(R.id.signInButton);
+        eNama = findViewById(R.id.nama);
+        eNo = findViewById(R.id.no_telp);
+        eKode = findViewById(R.id.kode_perusahaan);
+        eUser = findViewById(R.id.user_member);
+        ePass = findViewById(R.id.pass_member);
+        Proses = findViewById(R.id.daftar_member);
+        databaseMember = FirebaseDatabase.getInstance().getReference("Member");
 
-// Getting Firebase Auth Instance into firebaseAuth object.
-        firebaseAuth = FirebaseAuth.getInstance();
-
-
-// Creating and Configuring Google Sign In object.
-        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-
-// Creating and Configuring Google Api Client.
-        googleApiClient = new GoogleApiClient.Builder(SignupActivityMember.this)
-                .enableAutoManage(SignupActivityMember.this, new GoogleApiClient.OnConnectionFailedListener() {
-                    @Override
-                    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
-                    }
-                } /* OnConnectionFailedListener */)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, googleSignInOptions)
-                .build();
-
-
-// Adding Click listener to User Sign in Google button.
-        signInButton.setOnClickListener(new View.OnClickListener() {
+        Proses.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                UserSignInMethod();
-
+            public void onClick(View v) {
+                addMember();
             }
         });
 
-// Adding Click Listener to User Sign Out button.
-
     }
 
+    private void addMember() {
 
-    // Sign In function Starts From Here.
-    public void UserSignInMethod() {
+        String nama = eNama.getText().toString().trim();
+        String no_telp = eNo.getText().toString().trim();
+        String kode_perusahaan = eKode.getText().toString().trim();
+        String user_member = eUser.getText().toString().trim();
+        String pass_member = ePass.getText().toString().trim();
 
-// Passing Google Api Client into Intent.
-        Intent AuthIntent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+        if (TextUtils.isEmpty(nama)) {
+            Toast.makeText(this, "Isi Nama", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(no_telp)) {
+            Toast.makeText(this, "Isi No Telepon", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(kode_perusahaan)) {
+            Toast.makeText(this, "Isi Kode Perusahaan", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(user_member)) {
+            Toast.makeText(this, "Isi Username", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(pass_member)) {
+            Toast.makeText(this, "Isi Password", Toast.LENGTH_LONG).show();
+        } else {
+            String uid = databaseMember.push().getKey();
 
-        startActivityForResult(AuthIntent, RequestSignInCode);
-    }
+            Member member = new Member(uid, nama, no_telp, kode_perusahaan, user_member, pass_member);
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            databaseMember.child(uid).setValue(member);
 
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == RequestSignInCode) {
-
-            GoogleSignInResult googleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-
-            if (googleSignInResult.isSuccess()) {
-
-                GoogleSignInAccount googleSignInAccount = googleSignInResult.getSignInAccount();
-
-                FirebaseUserAuth(googleSignInAccount);
-            }
+            Toast.makeText(this, "Data Telah Terkirim ", Toast.LENGTH_LONG).show();
 
         }
     }
 
-    public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
-
-        AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
-
-        Toast.makeText(SignupActivityMember.this, " " + authCredential.getProvider(), Toast.LENGTH_LONG).show();
-
-        firebaseAuth.signInWithCredential(authCredential)
-                .addOnCompleteListener(SignupActivityMember.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> AuthResultTask) {
-
-                        if (AuthResultTask.isSuccessful()) {
-
-// Getting Current Login user details.
-                            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-
-
-// Hiding Login in button.
-                            signInButton.setVisibility(View.GONE);
-
-                        }
-                    }
-                });
-    }
-
-    public void UserSignOutFunction() {
-
-// Sing Out the User.
-        firebaseAuth.signOut();
-
-        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(
-                new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(@NonNull Status status) {
-
-// Write down your any code here which you want to execute After Sign Out.
-
-// Printing Logout toast message on screen.
-
-                    }
-                });
-
-// After logout setting up login button visibility to visible.
-        signInButton.setVisibility(View.VISIBLE);
-    }
-
 }
+

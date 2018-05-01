@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_farmgo"
-    tools:context=".SignupActivityMember">
+    android:background="@drawable/bg_farmgo">
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/logo"
-        android:layout_below="@+id/user_member"
-        android:layout_marginTop="26dp">
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp">
 
     </com.google.android.gms.common.SignInButton>
 
@@ -26,7 +24,7 @@
         android:layout_below="@+id/logo"
         android:layout_marginTop="23dp"
         android:ems="10"
-        android:inputType="text|textPersonName"
+        android:inputType="text"
         android:text="Nama"
         android:textColor="@color/cardview_light_background" />
 
@@ -38,7 +36,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
         android:ems="10"
-        android:inputType="textPersonName|phone"
+        android:inputType="text"
         android:text="No Telepon"
         android:textColor="@color/cardview_light_background" />
 
@@ -50,7 +48,7 @@
         android:layout_alignBottom="@+id/pass_member"
         android:layout_alignStart="@+id/kode_perusahaan"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:text="Username"
         android:textColor="@color/cardview_light_background" />
 
@@ -95,9 +93,17 @@
         android:layout_below="@+id/no_telp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="text|textPersonName"
+        android:inputType="number"
         android:text="Kode Perusahaan"
         android:textColor="@color/cardview_light_background" />
+
+    <Button
+        android:id="@+id/daftar_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signInButton"
+        android:layout_centerHorizontal="true"
+        android:text="Daftar" />
 
 
 </RelativeLayout>
