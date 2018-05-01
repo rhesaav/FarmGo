@@ -20,12 +20,12 @@ public class SignupActivityOwner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tab1);
+        setContentView(R.layout.tab_owner);
 
-        rName = findViewById(R.id.name);
-        rTelp = findViewById(R.id.telp);
-        rUsername = findViewById(R.id.username);
-        rPassword = findViewById(R.id.password);
+        rName = findViewById(R.id.nama_owner);
+        rTelp = findViewById(R.id.no_telp_owner);
+        rUsername = findViewById(R.id.user_owner);
+        rPassword = findViewById(R.id.pass_owner);
         rNamaperusahaan = findViewById(R.id.namaperusahaan);
         databaseOwner = FirebaseDatabase.getInstance().getReference("Owner");
 
