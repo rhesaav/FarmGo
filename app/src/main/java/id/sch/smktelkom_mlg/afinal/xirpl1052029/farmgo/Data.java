@@ -9,6 +9,7 @@ import java.io.Serializable;
 public class Data implements Serializable {
 
     private String uid;
+    private String etanggal;
     private String umur;
     private String jayam;
     private String jmati;
@@ -20,8 +21,9 @@ public class Data implements Serializable {
 
     }
 
-    public Data(String uid, String umur, String jayam, String jmati, String jtelur, String btelur, String bmakan) {
+    public Data(String uid, String etanggal, String umur, String jayam, String jmati, String jtelur, String btelur, String bmakan) {
         this.uid = uid;
+        this.etanggal = etanggal;
         this.umur = umur;
         this.jayam = jayam;
         this.jmati = jmati;
@@ -32,6 +34,7 @@ public class Data implements Serializable {
 
     public void clear() {
         this.uid = "";
+        this.etanggal = "";
         this.umur = "";
         this.jayam = "";
         this.jmati = "";
@@ -54,6 +57,10 @@ public class Data implements Serializable {
 
     public String getJmati() {
         return jmati;
+    }
+
+    public String getEtanggal() {
+        return etanggal;
     }
 
     public String getJtelur() {
