@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/name"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,12 +18,11 @@
         android:textColorHint="@android:color/white" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/telp"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
+        android:layout_alignStart="@+id/username"
+        android:layout_centerVertical="true"
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
         android:hint="No.Telp"
@@ -32,11 +31,11 @@
         android:textColorHint="@android:color/white" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/username"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText"
-        android:layout_below="@+id/editText7"
+        android:layout_alignStart="@+id/kirim"
+        android:layout_below="@+id/telp"
         android:layout_marginTop="45dp"
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
@@ -46,11 +45,11 @@
         android:textColorHint="@android:color/white" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/password"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button3"
-        android:layout_alignEnd="@+id/editText7"
+        android:layout_above="@+id/kirim"
+        android:layout_alignEnd="@+id/telp"
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
         android:hint="Passoword"
@@ -59,10 +58,10 @@
         android:textColorHint="@android:color/white" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/kirim"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText8"
+        android:layout_below="@+id/username"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="55dp"
         android:background="@drawable/button_transparent"
