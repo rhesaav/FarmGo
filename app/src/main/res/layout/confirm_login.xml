@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/confirm_login">
+
+    <TextView
+        android:id="@+id/namaperusahaan"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/namapemilik"
+        android:layout_below="@+id/namapemilik"
+        android:layout_marginTop="19dp"
+        android:text="Nama Perusahaan" />
+
+    <TextView
+        android:id="@+id/namapemilik"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="229dp"
+        android:text="Nama Pemilik" />
+
+    <TextView
+        android:id="@+id/kode"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/namaperusahaan"
+        android:layout_below="@+id/namaperusahaan"
+        android:layout_marginTop="21dp"
+        android:text="Kode" />
+</RelativeLayout>
