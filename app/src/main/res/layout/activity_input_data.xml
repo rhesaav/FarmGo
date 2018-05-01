@@ -105,7 +105,7 @@
         android:id="@+id/bpakan"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/kirim"
+        android:layout_above="@+id/proses_member"
         android:layout_alignStart="@+id/jtelur"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/cardview_light_background"
@@ -119,7 +119,7 @@
 
 
     <Button
-        android:id="@+id/kirim"
+        android:id="@+id/proses_member"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btelur"
