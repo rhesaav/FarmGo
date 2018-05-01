@@ -4,7 +4,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo.ActivityTab$PlaceholderFragment">
+    tools:context="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo.TabActivity$PlaceholderFragment">
 
     <TextView
         android:id="@+id/section_label"

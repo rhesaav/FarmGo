@@ -29,7 +29,7 @@
         <activity android:name=".SignupActivityOwner" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".ActivityTab"
+            android:name=".TabActivity"
             android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme"></activity>
     </application>
