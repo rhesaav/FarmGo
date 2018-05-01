@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo.TampilData">
+
+    <TextView
+        android:id="@+id/etanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="tanggal" />
+
+    <TextView
+        android:id="@+id/umur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:hint="umur" />
+
+    <TextView
+        android:id="@+id/jayam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/jmati"
+        android:layout_marginTop="30dp"
+        android:hint="jumlah ayam" />
+
+
+    <TextView
+        android:id="@+id/jmati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/umur"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="48dp"
+        android:hint="jumlah mati" />
+
+    <TextView
+        android:id="@+id/jtelur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btelur"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="42dp"
+        android:hint="jumlah telur" />
+
+    <TextView
+        android:id="@+id/btelur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bmakan"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="49dp"
+        android:hint="berat telur" />
+
+    <TextView
+        android:id="@+id/bmakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/kirim"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="23dp"
+        android:hint="berat makan" />
+
+</LinearLayout>
