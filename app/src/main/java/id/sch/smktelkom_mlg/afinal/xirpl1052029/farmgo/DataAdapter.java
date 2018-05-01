@@ -1,6 +1,7 @@
 package id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +32,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         notifyItemInserted(dataList.size() - 1);
     }
 
-    public void addAll(List<Data> travelList) {
+    public void addAll(List<Data> dataList) {
         for (Data data : dataList) {
             add(data);
         }
@@ -57,15 +58,22 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.listview, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.listview, null);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         Data data = dataList.get(position);
         holder.title.setText(data.getEtanggal());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), TampilData.class);
+                view.getContext().startActivity(i);
+            }
+        });
     }
 
     @Override
