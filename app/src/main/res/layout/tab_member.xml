@@ -90,8 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/proses_member"
         android:layout_below="@+id/proses_member"
-        android:layout_marginTop="38dp"
-        android:background="@drawable/button_transparent">
+        android:layout_marginTop="38dp">
 
     </com.google.android.gms.common.SignInButton>
 
