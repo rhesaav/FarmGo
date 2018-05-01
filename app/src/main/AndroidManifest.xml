@@ -13,11 +13,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".OptionalLogin">
         </activity>
-
-        <activity android:name=".SignupActivityMember">
+        <activity android:name=".SignupActivityOwner">
 
         </activity>
-        <activity android:name=".SignupActivityOwner" />
         <activity android:name=".IntroductionActivity">
 
         </activity>

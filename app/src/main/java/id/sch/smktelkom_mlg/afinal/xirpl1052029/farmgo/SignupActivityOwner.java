@@ -43,14 +43,18 @@ public class SignupActivityOwner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_owner);
 
+        View view = findViewById(R.id.main_content);
+        View myView = view.findViewById(R.id.tabOwner);
+
         rName = findViewById(R.id.nama_owner);
         rTelp = findViewById(R.id.no_telp_owner);
         rUsername = findViewById(R.id.user_owner);
         rPassword = findViewById(R.id.pass_owner);
         rNamaperusahaan = findViewById(R.id.namaperusahaan);
         rAlamat = findViewById(R.id.alamat_perusahaan);
-        rKirim = findViewById(R.id.proses_owner);
+        rKirim = myView.findViewById(R.id.proses_owner);
         databaseOwner = FirebaseDatabase.getInstance().getReference("Owner");
+
 
         rKirim.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,8 +63,7 @@ public class SignupActivityOwner extends AppCompatActivity {
             }
         });
 
-        signInButton = findViewById(R.id.signInButtonOwner);
-        signInButton = findViewById(R.id.signInButtonOwner);
+        signInButton = myView.findViewById(R.id.signInButtonOwner);
         firebaseAuth = FirebaseAuth.getInstance();
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

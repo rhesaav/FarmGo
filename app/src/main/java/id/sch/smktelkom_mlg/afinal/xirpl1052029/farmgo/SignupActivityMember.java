@@ -49,12 +49,14 @@ public class SignupActivityMember extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_member);
 
+        View view = findViewById(R.id.main_content);
+        View myView = view.findViewById(R.id.tabMember);
 
         eNama = findViewById(R.id.nama_owner);
         eNo = findViewById(R.id.no_telp_member);
         eUser = findViewById(R.id.user_owner);
         ePass = findViewById(R.id.pass_owner);
-        Proses = findViewById(R.id.proses_owner);
+        Proses = myView.findViewById(R.id.proses_member);
         databaseMember = FirebaseDatabase.getInstance().getReference("Member");
 
         Proses.setOnClickListener(new View.OnClickListener() {
@@ -65,10 +67,7 @@ public class SignupActivityMember extends AppCompatActivity {
         });
 
 
-        signInButton = findViewById(R.id.signInButton);
-
-
-        signInButton = findViewById(R.id.signInButton);
+        signInButton = myView.findViewById(R.id.signInButtonMember);
 
 // Getting Firebase Auth Instance into firebaseAuth object.
         firebaseAuth = FirebaseAuth.getInstance();

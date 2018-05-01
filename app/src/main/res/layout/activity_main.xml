@@ -3,43 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
 
     <Button
-        android:id="@+id/sign_out"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="Click Here To Sign Out"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/textViewName"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewName"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="20dp" />
-
+        android:layout_centerVertical="true"
+        android:text="Button" />
 </RelativeLayout>

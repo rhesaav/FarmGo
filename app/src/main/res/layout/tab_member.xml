@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabMember"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    tools:context="id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo.SignupActivityOwner">
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/nama_member"
@@ -12,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/judul"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="31dp"
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
         android:hint="Name"
@@ -78,14 +76,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="19dp"
         android:fontFamily="@font/lemonmilkbold"
         android:text="Create a new Member"
         android:textColor="@android:color/white"
         android:textSize="20dp" />
 
     <com.google.android.gms.common.SignInButton
-        android:id="@+id/signInButton"
+        android:id="@+id/signInButtonMember"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/proses_member"
