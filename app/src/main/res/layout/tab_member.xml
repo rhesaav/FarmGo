@@ -7,9 +7,9 @@
         android:id="@+id/nama"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/judul"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="49dp"
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
         android:hint="Name"
@@ -21,8 +21,9 @@
         android:id="@+id/no_telp"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/user_member"
-        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/nama"
+        android:layout_below="@+id/nama"
+        android:layout_marginTop="42dp"
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
         android:hint="No.Telp"
@@ -61,9 +62,9 @@
         android:id="@+id/proses_member"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nama"
+        android:layout_alignEnd="@+id/pass_member"
         android:layout_below="@+id/user_member"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="58dp"
         android:background="@drawable/button_transparent"
         android:text="Daftar"
         android:textColor="@android:color/white" />
@@ -74,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/lemonmilkbold"
         android:text="Create a new Member"
         android:textColor="@android:color/white"
@@ -86,7 +87,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/proses_member"
         android:layout_below="@+id/proses_member"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="38dp"
+        android:background="@drawable/button_transparent">
 
     </com.google.android.gms.common.SignInButton>
 
