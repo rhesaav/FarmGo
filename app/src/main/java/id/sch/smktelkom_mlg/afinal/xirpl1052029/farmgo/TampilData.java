@@ -16,7 +16,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataActivity extends AppCompatActivity {
+/**
+ * Created by haniivn on 5/1/2018.
+ */
+
+public class TampilData extends AppCompatActivity {
     protected Context context;
     Data data;
     List<Data> dataList = new ArrayList<>();
@@ -54,8 +58,8 @@ public class DataActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
     }
 }
+
