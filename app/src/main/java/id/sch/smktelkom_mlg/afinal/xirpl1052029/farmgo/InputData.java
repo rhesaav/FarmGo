@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * Created by haniivn on 4/29/2018.
@@ -27,15 +26,6 @@ public class InputData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_data);
 
-        eTanggal = findViewById(R.id.etanggal);
-        eUmur = findViewById(R.id.umur);
-        eJayam = findViewById(R.id.jayam);
-        eJmati = findViewById(R.id.jmati);
-        eJtelur = findViewById(R.id.jtelur);
-        eBtelur = findViewById(R.id.btelur);
-        eBmakan = findViewById(R.id.bmakan);
-        bttnKirim = findViewById(R.id.kirim);
-        databaseCabang1 = FirebaseDatabase.getInstance().getReference("Cabang1");
 
         bttnKirim.setOnClickListener(new View.OnClickListener() {
             @Override
