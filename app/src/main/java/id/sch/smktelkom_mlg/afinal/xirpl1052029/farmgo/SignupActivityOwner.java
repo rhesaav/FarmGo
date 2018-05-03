@@ -1,8 +1,10 @@
 package id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -30,8 +32,6 @@ public class SignupActivityOwner extends AppCompatActivity {
     public static final int RequestSignInCode = 7;
     public FirebaseAuth firebaseAuth;
     public GoogleApiClient googleApiClient;
-    DatabaseReference databaseMember;
-    Button SignOutButton;
     com.google.android.gms.common.SignInButton signInButton;
 
     DatabaseReference databaseOwner;
@@ -41,10 +41,7 @@ public class SignupActivityOwner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tab_owner);
-
-        View view = findViewById(R.id.main_content);
-        View myView = view.findViewById(R.id.tabOwner);
+        setContentView(R.layout.fragment_fragment_owner);
 
         rName = findViewById(R.id.nama_owner);
         rTelp = findViewById(R.id.no_telp_owner);
@@ -52,7 +49,7 @@ public class SignupActivityOwner extends AppCompatActivity {
         rPassword = findViewById(R.id.pass_owner);
         rNamaperusahaan = findViewById(R.id.namaperusahaan);
         rAlamat = findViewById(R.id.alamat_perusahaan);
-        rKirim = myView.findViewById(R.id.proses_owner);
+        rKirim = findViewById(R.id.proses_owner);
         databaseOwner = FirebaseDatabase.getInstance().getReference("Owner");
 
 
@@ -63,7 +60,7 @@ public class SignupActivityOwner extends AppCompatActivity {
             }
         });
 
-        signInButton = myView.findViewById(R.id.signInButtonOwner);
+        signInButton = findViewById(R.id.signInButtonOwner);
         firebaseAuth = FirebaseAuth.getInstance();
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -114,7 +111,6 @@ public class SignupActivityOwner extends AppCompatActivity {
 
                 FirebaseUserAuth(googleSignInAccount);
             }
-
         }
     }
 
@@ -129,7 +125,7 @@ public class SignupActivityOwner extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> AuthResultTask) {
 
-                        Intent i = new Intent(SignupActivityOwner.this, SignupActivityOwner.class);
+                        Intent i = new Intent(SignupActivityOwner.this, MainActivity.class);
                         startActivity(i);
                         finish();
 
@@ -137,7 +133,13 @@ public class SignupActivityOwner extends AppCompatActivity {
                 });
     }
 
+    @Override
+    public void startActivityFromFragment(@NonNull Fragment fragment, Intent intent, int requestCode, @Nullable Bundle options) {
+        super.startActivityFromFragment(fragment, intent, requestCode, options);
+    }
+
     private void addOwner() {
+
         String name = rName.getText().toString().trim();
         String telp = rTelp.getText().toString().trim();
         String username = rUsername.getText().toString().trim();

@@ -17,8 +17,7 @@ public class OptionalLogin extends AppCompatActivity {
     }
 
     public void goToDaftar(View view) {
-        Intent intent = new Intent(this, TabActivity.class);
-        startActivity(intent);
+
     }
 
     @Override

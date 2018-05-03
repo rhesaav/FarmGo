@@ -27,36 +27,28 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivityMember extends AppCompatActivity {
 
-    // Request sing in code. Could be anything as you required.
     public static final int RequestSignInCode = 7;
-    // Firebase Auth Object.
     public FirebaseAuth firebaseAuth;
-    // Google API Client object.
     public GoogleApiClient googleApiClient;
+
     DatabaseReference databaseMember;
-    // Sing out button.
-    Button SignOutButton;
-    // Google Sign In button .
     com.google.android.gms.common.SignInButton signInButton;
     private EditText eNama, eNo, eUser, ePass;
     private Button Proses;
-    private Member member;
 
-    // TextView to Show Login User Email and Name.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_member);
 
-        View view = findViewById(R.id.main_content);
-        View myView = view.findViewById(R.id.tabMember);
+
 
         eNama = findViewById(R.id.nama_owner);
         eNo = findViewById(R.id.no_telp_member);
         eUser = findViewById(R.id.user_owner);
         ePass = findViewById(R.id.pass_owner);
-        Proses = myView.findViewById(R.id.proses_member);
+        Proses = findViewById(R.id.proses_member);
         databaseMember = FirebaseDatabase.getInstance().getReference("Member");
 
         Proses.setOnClickListener(new View.OnClickListener() {
@@ -67,31 +59,24 @@ public class SignupActivityMember extends AppCompatActivity {
         });
 
 
-        signInButton = myView.findViewById(R.id.signInButtonMember);
+        Button signInButton = findViewById(R.id.signInButtonMember);
 
-// Getting Firebase Auth Instance into firebaseAuth object.
         firebaseAuth = FirebaseAuth.getInstance();
-
-
-// Creating and Configuring Google Sign In object.
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
-// Creating and Configuring Google Api Client.
         googleApiClient = new GoogleApiClient.Builder(SignupActivityMember.this)
                 .enableAutoManage(SignupActivityMember.this, new GoogleApiClient.OnConnectionFailedListener() {
                     @Override
                     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
                     }
-                } /* OnConnectionFailedListener */)
+                })
                 .addApi(Auth.GOOGLE_SIGN_IN_API, googleSignInOptions)
                 .build();
 
-
-// Adding Click listener to User Sign in Google button.
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,11 +89,8 @@ public class SignupActivityMember extends AppCompatActivity {
 
     }
 
-
-    // Sign In function Starts From Here.
     public void UserSignInMethod() {
 
-// Passing Google Api Client into Intent.
         Intent AuthIntent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
 
         startActivityForResult(AuthIntent, RequestSignInCode);
@@ -133,6 +115,7 @@ public class SignupActivityMember extends AppCompatActivity {
         }
     }
 
+
     public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
 
         AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
@@ -144,7 +127,7 @@ public class SignupActivityMember extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> AuthResultTask) {
 
-                        Intent i = new Intent(SignupActivityMember.this, SignupActivityOwner.class);
+                        Intent i = new Intent(SignupActivityMember.this, MainActivity.class);
                         startActivity(i);
                         finish();
 
@@ -152,7 +135,7 @@ public class SignupActivityMember extends AppCompatActivity {
                 });
     }
 
-    private void addMember() {
+    public void addMember() {
 
         String nama = eNama.getText().toString().trim();
         String no_telp = eNo.getText().toString().trim();
