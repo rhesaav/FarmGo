@@ -4,23 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/confirmation">
 
-    <TextView
-        android:id="@+id/owncode"
-        android:layout_width="130dp"
-        android:layout_height="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Own Code" />
-
-    <TextView
-        android:id="@+id/groupcode"
-        android:layout_width="130dp"
-        android:layout_height="30dp"
-        android:layout_alignStart="@+id/owncode"
-        android:layout_below="@+id/owncode"
-        android:layout_marginTop="60dp"
-        android:text="Group Code" />
-
     <Button
         android:id="@+id/paham"
         android:layout_width="220dp"
@@ -32,4 +15,15 @@
         android:text="Ok! I Understand"
         android:textAlignment="center"
         android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/valueView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/paham"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Please Wait"
+        android:textAlignment="center" />
 </RelativeLayout>
