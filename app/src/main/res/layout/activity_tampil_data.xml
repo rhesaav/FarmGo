@@ -9,6 +9,7 @@
 
     <!-- Row 1 with single column -->
     <TableRow
+        android:id="@+id/TableLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
@@ -35,7 +36,7 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/TextView5"
+            android:id="@+id/etanggal"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
@@ -69,6 +70,7 @@
             android:textColor="#000000" />
 
         <TextView
+            android:id="@+id/umur"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
@@ -103,7 +105,7 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/TextView22"
+            android:id="@+id/jayam"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
@@ -137,6 +139,7 @@
             android:textColor="#000000" />
 
         <TextView
+            android:id="@+id/jmati"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
@@ -171,7 +174,7 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/TextView12"
+            android:id="@+id/jtelur"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
@@ -205,6 +208,7 @@
             android:textColor="#000000" />
 
         <TextView
+            android:id="@+id/btelur"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
@@ -237,6 +241,7 @@
             android:textColor="#000000" />
 
         <TextView
+            android:id="@+id/bmakan"
             android:layout_weight="1"
             android:background="#d3d3d3"
             android:gravity="center"
