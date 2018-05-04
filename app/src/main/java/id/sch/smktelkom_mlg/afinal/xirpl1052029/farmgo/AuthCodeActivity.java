@@ -21,6 +21,7 @@ import java.util.Random;
 
 public class AuthCodeActivity extends AppCompatActivity {
     private TextView mValueView;
+    private TextView mValueViewC;
     private Firebase mRef;
     private ArrayList<String> mCode = new ArrayList<String>();
 
@@ -30,6 +31,7 @@ public class AuthCodeActivity extends AppCompatActivity {
         setContentView(R.layout.confirmation_register);
 
         mValueView = findViewById(R.id.valueView);
+        mValueViewC = findViewById(R.id.valueViewC);
         getCode();
 
     }

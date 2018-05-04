@@ -15,12 +15,12 @@ public class Owner implements Serializable {
     private String password;
     private String namaperusahaan;
     private String alamat;
-
+    private String kodemember;
     public Owner() {
 
     }
 
-    public Owner(String uid, String name, String telp, String username, String password, String namaperusahaan, String alamat) {
+    public Owner(String uid, String name, String telp, String username, String password, String namaperusahaan, String alamat, String kodemember) {
         this.uid = uid;
         this.name = name;
         this.telp = telp;
@@ -28,6 +28,7 @@ public class Owner implements Serializable {
         this.password = password;
         this.namaperusahaan = namaperusahaan;
         this.alamat = alamat;
+        this.kodemember = kodemember;
     }
 
     public void clear() {
@@ -38,6 +39,7 @@ public class Owner implements Serializable {
         this.username = "";
         this.password = "";
         this.alamat = "";
+        this.kodemember = "";
     }
 
     public String getUid() {
@@ -66,6 +68,10 @@ public class Owner implements Serializable {
 
     public String getNamaperusahaan() {
         return namaperusahaan;
+    }
+
+    public String kodemember() {
+        return kodemember;
     }
 }
 

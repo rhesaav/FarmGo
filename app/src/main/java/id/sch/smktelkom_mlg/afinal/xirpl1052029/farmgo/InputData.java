@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.afinal.xirpl1052029.farmgo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -70,13 +71,19 @@ public class InputData extends AppCompatActivity {
         } else if (TextUtils.isEmpty(bmakan)) {
             Toast.makeText(this, "Isi Berat Pakan", Toast.LENGTH_LONG).show();
         } else {
+            Intent inten = new Intent(InputData.this, TampilData.class);
+
             String uid = databaseCabang1.push().getKey();
+
+            inten.putExtra("uid", uid);
+
 
             Data data = new Data(uid, etanggal, umur, jayam, jtelur, jmati, btelur, bmakan);
 
             databaseCabang1.child(uid).setValue(data);
 
             Toast.makeText(this, "Data Telah Terkirim ", Toast.LENGTH_LONG).show();
+            startActivity(inten);
 
         }
 

@@ -35,7 +35,7 @@ public class SignupActivityOwner extends AppCompatActivity {
     com.google.android.gms.common.SignInButton signInButton;
 
     DatabaseReference databaseOwner;
-    private EditText rName, rTelp, rUsername, rPassword, rNamaperusahaan, rAlamat;
+    private EditText rName, rTelp, rUsername, rPassword, rNamaperusahaan, rAlamat, rKodeMember;
     private Button rKirim;
 
     @Override
@@ -43,6 +43,7 @@ public class SignupActivityOwner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_fragment_owner);
 
+        rKodeMember = findViewById(R.id.valueViewC);
         rName = findViewById(R.id.nama_owner);
         rTelp = findViewById(R.id.no_telp_owner);
         rUsername = findViewById(R.id.user_owner);
@@ -140,6 +141,7 @@ public class SignupActivityOwner extends AppCompatActivity {
 
     private void addOwner() {
 
+        String kodemember = rKodeMember.getText().toString().trim();
         String name = rName.getText().toString().trim();
         String telp = rTelp.getText().toString().trim();
         String username = rUsername.getText().toString().trim();
@@ -151,6 +153,8 @@ public class SignupActivityOwner extends AppCompatActivity {
             Toast.makeText(this, "Isi Nama", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(telp)) {
             Toast.makeText(this, "Isi No Telepon", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(kodemember)) {
+            Toast.makeText(this, "Isi Kode", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(username)) {
             Toast.makeText(this, "Isi Username", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(password)) {
@@ -162,7 +166,7 @@ public class SignupActivityOwner extends AppCompatActivity {
         } else {
             String uid = databaseOwner.push().getKey();
 
-            Owner owner = new Owner(uid, name, telp, username, password, namaperusahaan, alamat);
+            Owner owner = new Owner(uid, name, telp, username, password, namaperusahaan, alamat, kodemember);
 
             databaseOwner.child(uid).setValue(owner);
 

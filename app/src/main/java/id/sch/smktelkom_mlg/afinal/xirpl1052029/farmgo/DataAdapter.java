@@ -66,7 +66,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         Data data = dataList.get(position);
-        holder.title.setText(data.getEtanggal());
+        /*holder.title.setText(data.getEtanggal());*/
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

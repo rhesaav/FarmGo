@@ -13,13 +13,28 @@
             android:id="@+id/nama_owner"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/pass_owner"
-            android:layout_below="@+id/judul"
-            android:layout_marginTop="31dp"
+            android:layout_alignStart="@+id/no_telp_owner"
+            android:layout_below="@+id/kodemember"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/cardview_light_background"
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <EditText
+            android:id="@+id/kodemember"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nama_owner"
+            android:layout_below="@+id/judul"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/cardview_light_background"
+            android:ems="10"
+            android:hint="Kode Member"
+            android:inputType="textPersonName"
+            android:maxLength="5"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
 
@@ -29,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/pass_owner"
             android:layout_below="@+id/nama_owner"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/cardview_light_background"
             android:ems="10"
             android:hint="No.Telp"
@@ -57,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/namaperusahaan"
             android:layout_below="@+id/no_telp_owner"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/cardview_light_background"
             android:ems="10"
             android:hint="Passoword"
@@ -71,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/proses_owner"
             android:layout_below="@+id/pass_owner"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/cardview_light_background"
             android:ems="10"
             android:hint="Nama Perusahaan"
@@ -99,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/namaperusahaan"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/button_transparent"
             android:text="Daftar"
             android:textColor="@android:color/white" />
@@ -110,9 +125,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="52dp"
             android:fontFamily="@font/lemonmilkbold"
             android:text="Lets be a Farmer"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="20dp" />
 
@@ -120,9 +136,9 @@
             android:id="@+id/signInButtonOwner"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/proses_owner"
-            android:layout_marginBottom="45dp">
+            android:layout_below="@+id/proses_owner"
+            android:layout_marginTop="21dp">
 
         </com.google.android.gms.common.SignInButton>
 

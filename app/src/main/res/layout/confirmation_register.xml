@@ -20,10 +20,30 @@
         android:id="@+id/valueView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/paham"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:ems="10"
+        android:fontFamily="@font/lemonmilkitalic"
         android:inputType="textPersonName"
-        android:text="Please Wait"
-        android:textAlignment="center" />
+        android:text="Please Wait..."
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/valueViewC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/valueView"
+        android:layout_alignStart="@+id/valueView"
+        android:layout_below="@+id/valueView"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="15dp" />
 </RelativeLayout>

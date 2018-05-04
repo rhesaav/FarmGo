@@ -2,7 +2,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_farmgo"
-    android:backgroundTint="@drawable/bg_farmgo"
     android:shrinkColumns="*"
     android:stretchColumns="*">
 

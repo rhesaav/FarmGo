@@ -8,14 +8,14 @@ import java.io.Serializable;
 
 public class Data implements Serializable {
 
-    private String uid;
-    private String etanggal;
-    private String umur;
-    private String jayam;
-    private String jmati;
-    private String jtelur;
-    private String btelur;
-    private String bmakan;
+    String uid;
+    String etanggal;
+    String umur;
+    String jayam;
+    String jmati;
+    String jtelur;
+    String btelur;
+    String bmakan;
 
 
     public Data() {
@@ -46,37 +46,6 @@ public class Data implements Serializable {
         this.bmakan = "";
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public String getUmur() {
-        return umur;
-    }
-
-    public String getJayam() {
-        return jayam;
-    }
-
-    public String getJmati() {
-        return jmati;
-    }
-
-    public String getEtanggal() {
-        return etanggal;
-    }
-
-    public String getJtelur() {
-        return jtelur;
-    }
-
-    public String getBtelur() {
-        return btelur;
-    }
-
-    public String getBmakan() {
-        return bmakan;
-    }
 
 
 }

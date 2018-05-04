@@ -22,7 +22,7 @@ public class FragmentOwner extends Fragment {
     IListener oListener;
 
     DatabaseReference databaseOwner;
-    private EditText nama, no_telp, user, passwordo, nama_p, alamato;
+    EditText nama, no_telp, user, passwordo, nama_p, alamato, kodemembero;
     private Button proses;
 
     public FragmentOwner() {
@@ -42,6 +42,7 @@ public class FragmentOwner extends Fragment {
         passwordo = view.findViewById(R.id.pass_owner);
         nama_p = view.findViewById(R.id.namaperusahaan);
         alamato = view.findViewById(R.id.alamat_perusahaan);
+        kodemembero = view.findViewById(R.id.kodemember);
         proses = view.findViewById(R.id.proses_owner);
         databaseOwner = FirebaseDatabase.getInstance().getReference("Owner");
 
@@ -79,13 +80,14 @@ public class FragmentOwner extends Fragment {
         String password = passwordo.getText().toString().trim();
         String namaperusahaan = nama_p.getText().toString().trim();
         String alamat = alamato.getText().toString().trim();
+        String kodemember = kodemembero.getText().toString().trim();
 
 
         String uid = databaseOwner.push().getKey();
 
-        Owner owner = new Owner(uid, name, telp, username, password, namaperusahaan, alamat);
+        Owner owner = new Owner(uid, name, telp, username, password, namaperusahaan, alamat, kodemember);
 
-        databaseOwner.child(uid).setValue(owner);
+        databaseOwner.child(name).setValue(owner);
 
 
     }
