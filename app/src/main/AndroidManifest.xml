@@ -16,7 +16,13 @@
         <activity android:name=".IntroductionActivity">
 
         </activity>
-        <activity android:name=".LoginMemberActivity" />
+        <activity android:name=".LoginActivityMember">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".FragmentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

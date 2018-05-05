@@ -1,30 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/about">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tabout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="12dp"
-        android:fontFamily="@font/lemonmilk"
-        android:text="SMK TELKOM MALANG"
-        android:textColor="@android:color/white" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="About"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/irhesa"
+        android:layout_width="173dp"
+        android:layout_height="302dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/tabout"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/rhesa"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="31dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/trhesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ihani"
+        android:layout_alignEnd="@+id/irhesa"
+        android:text="Rhesa Alvin Valeriansyah"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <ImageView
+        android:id="@+id/ihani"
+        android:layout_width="171dp"
+        android:layout_height="223dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tabout"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/hani"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/thani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ihani"
+        android:layout_alignEnd="@+id/ihani"
+        android:layout_marginEnd="31dp"
+        android:text="Ivana Hani Putri"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <ImageView
+        android:id="@+id/isamid"
+        android:layout_width="167dp"
+        android:layout_height="355dp"
+        android:layout_below="@+id/trhesa"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/samid"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <TextView
+        android:id="@+id/tsamid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="11dp"
-        android:layout_marginStart="44dp"
-        android:fontFamily="@font/lemonmilk"
-        android:text="FarmGo"
-        android:textColor="@android:color/white" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:text="Alifian Dimas Sugara"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="517dp" />
+
 </RelativeLayout>
